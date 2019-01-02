@@ -1,0 +1,118 @@
+{
+  "_from": "ng-mcmonitor",
+  "_id": "ng-mcmonitor@0.5.6",
+  "_inBundle": false,
+  "_integrity": "sha512-p7nMUcmPSmkM8nHr87gfMAk1JscCuHyHO1zRk69a96k3GhIWLXpA1zjHP0yIhqgZGK7tk3EVQJlDK5KSGdg34Q==",
+  "_location": "/ng-mcmonitor",
+  "_phantomChildren": {
+    "tslib": "1.9.0"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "ng-mcmonitor",
+    "name": "ng-mcmonitor",
+    "escapedName": "ng-mcmonitor",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-mcmonitor/-/ng-mcmonitor-0.5.6.tgz",
+  "_shasum": "15e73c7524f98ca590fd1d87586b1dd9d317864d",
+  "_spec": "ng-mcmonitor",
+  "_where": "/home/matio/java/micro-monitor",
+  "author": {
+    "name": "Deepu KS"
+  },
+  "bugs": {
+    "url": "https://github.com/Mcmonitor/generator-Mcmonitor/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ngx-translate/core": "^10.0.1",
+    "@ngx-translate/http-loader": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": "A Mcmonitor util library for Angular 2",
+  "devDependencies": {
+    "@angular/animations": "^6.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/compiler": "^6.0.0",
+    "@angular/compiler-cli": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "@angular/forms": "^6.0.0",
+    "@angular/http": "^6.0.0",
+    "@angular/platform-browser": "^6.0.0",
+    "@angular/platform-browser-dynamic": "^6.0.0",
+    "@angular/platform-server": "^6.0.0",
+    "@angular/router": "^6.0.0",
+    "@types/hammerjs": "^2.0.34",
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.22",
+    "awesome-typescript-loader": "^3.1.3",
+    "codelyzer": "^4.0.1",
+    "core-js": "^2.4.1",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "jasmine-core": "^2.6.2",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-remap-coverage": "^0.1.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
+    "loader-utils": "^1.1.0",
+    "reflect-metadata": "^0.1.10",
+    "rimraf": "^2.6.1",
+    "rxjs": "6.1.0",
+    "shx": "^0.2.2",
+    "source-map-loader": "^0.2.1",
+    "ts-helpers": "^1.1.2",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "2.7.2",
+    "webpack": "^2.6.1",
+    "zone.js": "^0.8.11"
+  },
+  "homepage": "https://mcmonitor.github.io",
+  "keywords": [
+    "mcmonitor",
+    "angular",
+    "angular2"
+  ],
+  "license": "Apache-2.0",
+  "main": "bundles/ng-mcmonitor.umd.js",
+  "module": "index.js",
+  "name": "ng-mcmonitor",
+  "peerDependencies": {
+    "@angular/core": "^6.0.0",
+    "@angular/router": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mcmonitor/ng-mcmonitor.git"
+  },
+  "scripts": {
+    "build": "npm run cleanup && npm run ngc && webpack && shx cp bundles/ng-mcmonitor.umd.js bundles/index.js",
+    "build:aot": "npm run cleanup && npm run ngc-aot && webpack && shx cp bundles/ng-mcmonitor.umd.js bundles/index.js",
+    "build:local": "npm run build && npm test && npm pack",
+    "cleanup": "rimraf src/*.d.ts src/**/*.d.ts src/*.js src/**/*.js aot/* tests/**/*.d.ts tests/**/*.js tests/*.d.ts tests/*.js",
+    "lint": "tslint --project tslint.json",
+    "lint:fix": "tslint --project tslint.json --fix",
+    "ngc": "ngc",
+    "ngc-aot": "ngc -p tsconfig-aot.json",
+    "release": "npm test && git push && git push --tags && npm publish",
+    "release:major": "npm run build && npm version major -a -m \"Update to %s\" && npm run release",
+    "release:minor": "npm run build && npm version minor -a -m \"Update to %s\" && npm run release",
+    "release:patch": "npm run build && npm version patch -a -m \"Update to %s\" && npm run release",
+    "test": "npm run lint && karma start",
+    "test:watch": "karma start --singleRun=false --autoWatch=true"
+  },
+  "typings": "index.d.ts",
+  "version": "0.5.6"
+}
