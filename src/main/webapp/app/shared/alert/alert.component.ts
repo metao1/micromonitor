@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { McmAlertService } from 'ng-mcmonitor';
+import { McmAlertService } from '../mcmonitor';
 
 @Component({
     selector: 'mcm-alert',
@@ -10,7 +10,7 @@ import { McmAlertService } from 'ng-mcmonitor';
             </div>
         </div>`
 })
-export class McmAlertComponent implements OnInit, OnDestroy {
+export class AlertComponent implements OnInit, OnDestroy {
     alerts: any[];
 
     constructor(private alertService: McmAlertService) {}

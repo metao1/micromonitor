@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { McmEventManager, McmAlertService } from 'ng-mcmonitor';
+import { McmEventManager, McmAlertService } from '../mcmonitor';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs/Rx';
             </div>
         </div>`
 })
-export class McmAlertErrorComponent implements OnDestroy {
+export class AlertErrorComponent implements OnDestroy {
     alerts: any[];
     cleanHttpErrorListener: Subscription;
 

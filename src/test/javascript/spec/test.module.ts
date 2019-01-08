@@ -8,7 +8,7 @@ import { LoginOAuth2Service } from '../../../main/webapp/app/shared/oauth2/login
 import { AuthSessionServerProvider } from '../../../main/webapp/app/core/auth/auth-session.service';
 import { ProfileService } from '../../../main/webapp/app/layouts/profiles/profile.service';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { McmDataUtils, McmDateUtils, McmEventManager, McmAlertService, McmParseLinks } from 'ng-mcmonitor';
+import { McmDataUtils, McmDateUtils, McmEventManager, McmAlertService, McmParseLinks } from 'mcmonitor';
 
 import { Principal, AccountService, LoginModalService } from '../../../main/webapp/app/shared';
 import { MockPrincipal } from './helpers/mock-principal.service';

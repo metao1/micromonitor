@@ -89,7 +89,7 @@ public class MicroMonitorProperties {
         private String password;
 
         public Registry() {
-            this.password = MicroMonitorDefaults.Registry.password;
+            this.password = MicromonitorDefaults.Registry.password;
         }
 
         public String getPassword() {
@@ -106,7 +106,7 @@ public class MicroMonitorProperties {
         private Map<String, List<String>> authorizedMicroservicesEndpoints;
 
         public Gateway() {
-            this.authorizedMicroservicesEndpoints = MicroMonitorDefaults.Gateway.authorizedMicroservicesEndpoints;
+            this.authorizedMicroservicesEndpoints = MicromonitorDefaults.Gateway.authorizedMicroservicesEndpoints;
         }
 
         public MicroMonitorProperties.Gateway.RateLimiting getRateLimiting() {
@@ -323,15 +323,15 @@ public class MicroMonitorProperties {
         private boolean useDefaultResponseMessages;
 
         public Swagger() {
-            this.termsOfServiceUrl = MicroMonitorDefaults.Swagger.termsOfServiceUrl;
-            this.contactName = MicroMonitorDefaults.Swagger.contactName;
-            this.contactUrl = MicroMonitorDefaults.Swagger.contactUrl;
-            this.contactEmail = MicroMonitorDefaults.Swagger.contactEmail;
-            this.license = MicroMonitorDefaults.Swagger.license;
-            this.licenseUrl = MicroMonitorDefaults.Swagger.licenseUrl;
+            this.termsOfServiceUrl = MicromonitorDefaults.Swagger.termsOfServiceUrl;
+            this.contactName = MicromonitorDefaults.Swagger.contactName;
+            this.contactUrl = MicromonitorDefaults.Swagger.contactUrl;
+            this.contactEmail = MicromonitorDefaults.Swagger.contactEmail;
+            this.license = MicromonitorDefaults.Swagger.license;
+            this.licenseUrl = MicromonitorDefaults.Swagger.licenseUrl;
             this.defaultIncludePattern = "/api/.*";
-            this.host =  MicroMonitorDefaults.Swagger.host;
-            this.protocols = MicroMonitorDefaults.Swagger.protocols;
+            this.host = MicromonitorDefaults.Swagger.host;
+            this.protocols = MicromonitorDefaults.Swagger.protocols;
             this.useDefaultResponseMessages = true;
         }
 
@@ -466,7 +466,7 @@ public class MicroMonitorProperties {
             private String key;
 
             public RememberMe() {
-                this.key = MicroMonitorDefaults.Security.RememberMe.key;
+                this.key = MicromonitorDefaults.Security.RememberMe.key;
             }
 
             public String getKey() {
@@ -495,8 +495,8 @@ public class MicroMonitorProperties {
                 private long tokenValidityInSecondsForRememberMe;
 
                 public Jwt() {
-                    this.secret = MicroMonitorDefaults.Security.Authentication.Jwt.secret;
-                    this.base64Secret = MicroMonitorDefaults.Security.Authentication.Jwt.base64Secret;
+                    this.secret = MicromonitorDefaults.Security.Authentication.Jwt.secret;
+                    this.base64Secret = MicromonitorDefaults.Security.Authentication.Jwt.base64Secret;
                     this.tokenValidityInSeconds = 1800L;
                     this.tokenValidityInSecondsForRememberMe = 2592000L;
                 }
@@ -542,10 +542,10 @@ public class MicroMonitorProperties {
             private String clientSecret;
 
             public ClientAuthorization() {
-                this.accessTokenUri = MicroMonitorDefaults.Security.ClientAuthorization.accessTokenUri;
-                this.tokenServiceId = MicroMonitorDefaults.Security.ClientAuthorization.tokenServiceId;
-                this.clientId = MicroMonitorDefaults.Security.ClientAuthorization.clientId;
-                this.clientSecret = MicroMonitorDefaults.Security.ClientAuthorization.clientSecret;
+                this.accessTokenUri = MicromonitorDefaults.Security.ClientAuthorization.accessTokenUri;
+                this.tokenServiceId = MicromonitorDefaults.Security.ClientAuthorization.tokenServiceId;
+                this.clientId = MicromonitorDefaults.Security.ClientAuthorization.clientId;
+                this.clientSecret = MicromonitorDefaults.Security.ClientAuthorization.clientSecret;
             }
 
             public String getAccessTokenUri() {
@@ -895,7 +895,7 @@ public class MicroMonitorProperties {
         public MicroMonitorProperties.Http.Version version;
 
         public Http() {
-            this.version = MicroMonitorDefaults.Http.version;
+            this.version = MicromonitorDefaults.Http.version;
         }
 
         public MicroMonitorProperties.Http.Cache getCache() {

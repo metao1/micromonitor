@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'app/shared/mcmonitor';
 
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Principal, LoginModalService, LoginService } from 'app/shared';

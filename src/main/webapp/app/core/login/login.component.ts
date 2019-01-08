@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'app/shared/mcmonitor';
 
 import { LoginService } from './login.service';
 import { StateStorageService } from 'app/core/auth/state-storage.service';

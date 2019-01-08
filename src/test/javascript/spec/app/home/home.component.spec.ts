@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'mcmonitor';
 
 import { microMonitorRegistryTestModule } from '../../test.module';
 import { EurekaStatusService, HomeComponent } from '../../../../../main/webapp/app/home';

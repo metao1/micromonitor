@@ -1,8 +1,8 @@
 package de.vispiron.carsync.monitor.library.config;
 
-import de.vispiron.carsync.monitor.library.config.MicroMonitorProperties;
-
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public interface MicromonitorDefaults {

@@ -4,7 +4,7 @@ import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService } from 'ngx-webstorage';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'app/shared/mcmonitor';
 
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
@@ -12,7 +12,7 @@ import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.inter
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
 import { MicroMonitorRegistrySharedModule, UserRouteAccessService } from './shared';
 import { MicroMonitorRegistryAppRoutingModule } from './app-routing.module';
-import { MicroMonitorRegistryHomeModule } from './home/home.module';
+import { MicroMonitorRegistryHomeModule } from 'app/home';
 import { MicroMonitorRegistryAdminModule } from './admin/admin.module';
 import { MicroMonitorRegistryModule } from './registry/registry.module';
 
@@ -24,7 +24,7 @@ import { McmMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
     imports: [
         BrowserModule,
         MicroMonitorRegistryAppRoutingModule,
-        Ng2Webstorage.forRoot({ prefix: 'Mcm', separator: '-' }),
+        Ng2Webstorage.forRoot({ prefix: 'mcm', separator: '-' }),
         MicroMonitorRegistrySharedModule,
         MicroMonitorRegistryHomeModule,
         MicroMonitorRegistryAdminModule,

@@ -1,5 +1,5 @@
 import { SpyObject } from './spyobject';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'mcmonitor';
 import Spy = jasmine.Spy;
 
 export class MockEventManager extends SpyObject {

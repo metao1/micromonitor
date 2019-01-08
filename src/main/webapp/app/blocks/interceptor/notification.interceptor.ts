@@ -1,4 +1,4 @@
-import { McmAlertService } from 'ng-mcmonitor';
+import { McmAlertService } from 'app/shared/mcmonitor';
 import { HttpInterceptor, HttpRequest, HttpResponse, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Injector } from '@angular/core';
 import { Observable } from 'rxjs/Observable';

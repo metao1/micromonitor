@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { McmEventManager } from 'ng-mcmonitor';
+import { McmEventManager } from 'app/shared/mcmonitor';
 
 import { Account, LoginModalService, Principal } from 'app/shared';
 import { McmHealthService } from 'app/admin';
