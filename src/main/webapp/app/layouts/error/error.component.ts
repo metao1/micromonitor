@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'mcm-error',
+    selector: 'jhi-error',
     templateUrl: './error.component.html'
 })
 export class ErrorComponent implements OnInit {

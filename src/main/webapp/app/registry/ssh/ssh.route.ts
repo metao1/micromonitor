@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { McmSSHComponent } from './ssh.component';
+import { JhiSSHComponent } from './ssh.component';
 
 export const sshRoute: Route = {
     path: 'ssh',
-    component: McmSSHComponent,
+    component: JhiSSHComponent,
     data: {
         pageTitle: 'SSH public key'
     }

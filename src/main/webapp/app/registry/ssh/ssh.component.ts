@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { McmSSHService } from './ssh.service';
+import { JhiSSHService } from './ssh.service';
 
 @Component({
-    selector: 'mcm-applications',
+    selector: 'jhi-applications',
     templateUrl: './ssh.component.html'
 })
-export class McmSSHComponent implements OnInit {
+export class JhiSSHComponent implements OnInit {
     data: any;
     showMore: boolean;
 
-    constructor(private sshService: McmSSHService) {
+    constructor(private sshService: JhiSSHService) {
         this.showMore = true;
     }
 

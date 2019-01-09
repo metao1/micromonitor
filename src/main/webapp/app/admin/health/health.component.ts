@@ -2,22 +2,22 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { McmHealthService } from './health.service';
-import { McmHealthModalComponent } from './health-modal.component';
+import { JhiHealthService } from './health.service';
+import { JhiHealthModalComponent } from './health-modal.component';
 
-import { McmRoutesService, Route } from 'app/shared';
+import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'mcm-health',
+    selector: 'jhi-health',
     templateUrl: './health.component.html'
 })
-export class McmHealthCheckComponent implements OnInit, OnDestroy {
+export class JhiHealthCheckComponent implements OnInit, OnDestroy {
     healthData: any;
     updatingHealth: boolean;
     activeRoute: Route;
     subscription: Subscription;
 
-    constructor(private modalService: NgbModal, private healthService: McmHealthService, private routesService: McmRoutesService) {}
+    constructor(private modalService: NgbModal, private healthService: JhiHealthService, private routesService: JhiRoutesService) {}
 
     ngOnInit() {
         this.subscription = this.routesService.routeChanged$.subscribe((route) => {
@@ -51,7 +51,7 @@ export class McmHealthCheckComponent implements OnInit, OnDestroy {
 
     // user click
     showHealth(health: any) {
-        const modalRef = this.modalService.open(McmHealthModalComponent);
+        const modalRef = this.modalService.open(JhiHealthModalComponent);
         modalRef.componentInstance.currentHealth = health;
         modalRef.result.then(
             (result) => {

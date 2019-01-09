@@ -1,12 +1,12 @@
 import { SpyObject } from './spyobject';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 import Spy = jasmine.Spy;
 
 export class MockEventManager extends SpyObject {
     broadcastSpy: Spy;
 
     constructor() {
-        super(McmEventManager);
+        super(JhiEventManager);
         this.broadcastSpy = this.spy('broadcast').andReturn(this);
     }
 }

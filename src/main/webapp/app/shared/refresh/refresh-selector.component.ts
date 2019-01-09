@@ -1,20 +1,20 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Rx';
-import { McmRefreshService } from './refresh.service';
+import { JhiRefreshService } from './refresh.service';
 
 @Component({
-    selector: 'mcm-refresh-selector',
+    selector: 'jhi-refresh-selector',
     templateUrl: './refresh-selector.component.html',
     styleUrls: ['refresh-selector.component.scss']
 })
-export class McmRefreshSelectorComponent implements OnInit, OnDestroy {
+export class JhiRefreshSelectorComponent implements OnInit, OnDestroy {
     activeRefreshTime: number;
     refreshTimes: number[];
     refreshTimer: Subscription;
     refreshChangedSubscription: Subscription;
 
-    constructor(private refreshService: McmRefreshService) {
+    constructor(private refreshService: JhiRefreshService) {
         this.refreshTimes = [0, 5, 10, 30, 60, 300];
         this.activeRefreshTime = this.refreshTimes[0];
     }

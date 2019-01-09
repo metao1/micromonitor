@@ -2,34 +2,34 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { microMonitorRegistryTestModule } from '../../../test.module';
-import { McmApplicationsComponent, McmApplicationsService } from '../../../../../../main/webapp/app/registry';
+import { JhiApplicationsComponent, JhiApplicationsService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('ApplicationsComponent', () => {
-        let comp: McmApplicationsComponent;
-        let fixture: ComponentFixture<McmApplicationsComponent>;
+        let comp: JhiApplicationsComponent;
+        let fixture: ComponentFixture<JhiApplicationsComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [microMonitorRegistryTestModule],
-                    declarations: [McmApplicationsComponent],
-                    providers: [McmApplicationsService]
+                    declarations: [JhiApplicationsComponent],
+                    providers: [JhiApplicationsService]
                 })
-                    .overrideTemplate(McmApplicationsComponent, '')
+                    .overrideTemplate(JhiApplicationsComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(McmApplicationsComponent);
+            fixture = TestBed.createComponent(JhiApplicationsComponent);
             comp = fixture.componentInstance;
         });
 
         it(
             'refresh data',
             fakeAsync(
-                inject([McmApplicationsService], (service: McmApplicationsService) => {
+                inject([JhiApplicationsService], (service: JhiApplicationsService) => {
                     const response = {
                         applications: [
                             {

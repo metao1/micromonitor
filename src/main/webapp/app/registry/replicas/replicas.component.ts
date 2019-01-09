@@ -1,20 +1,20 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { McmReplicasService } from './replicas.service';
-import { McmRefreshService } from 'app/shared/refresh/refresh.service';
+import { JhiReplicasService } from './replicas.service';
+import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'mcm-replicas',
+    selector: 'jhi-replicas',
     templateUrl: './replicas.component.html',
     styleUrls: ['replicas.component.scss']
 })
-export class McmReplicasComponent implements OnInit, OnDestroy {
+export class JhiReplicasComponent implements OnInit, OnDestroy {
     showMore: boolean;
     replicas: any;
 
     refreshReloadSubscription: Subscription;
 
-    constructor(private replicasService: McmReplicasService, private refreshService: McmRefreshService) {
+    constructor(private replicasService: JhiReplicasService, private refreshService: JhiRefreshService) {
         this.showMore = true;
     }
 

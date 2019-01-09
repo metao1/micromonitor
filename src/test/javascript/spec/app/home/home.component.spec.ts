@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { microMonitorRegistryTestModule } from '../../test.module';
 import { EurekaStatusService, HomeComponent } from '../../../../../main/webapp/app/home';
 import { Account, AccountService, Principal, LoginModalService } from '../../../../../main/webapp/app/shared';
-import { McmApplicationsService } from '../../../../../main/webapp/app/registry';
-import { McmHealthService } from '../../../../../main/webapp/app/admin/health/health.service';
+import { JhiApplicationsService } from '../../../../../main/webapp/app/registry';
+import { JhiHealthService } from '../../../../../main/webapp/app/admin/health/health.service';
 
 describe('Component Tests', () => {
     describe('HomeComponent', () => {
@@ -23,7 +23,7 @@ describe('Component Tests', () => {
                     providers: [
                         Principal,
                         AccountService,
-                        McmEventManager,
+                        JhiEventManager,
                         {
                             provide: LoginModalService,
                             useValue: {
@@ -31,8 +31,8 @@ describe('Component Tests', () => {
                             }
                         },
                         EurekaStatusService,
-                        McmApplicationsService,
-                        McmHealthService
+                        JhiApplicationsService,
+                        JhiHealthService
                     ]
                 })
                     .overrideTemplate(HomeComponent, '')
@@ -74,7 +74,7 @@ describe('Component Tests', () => {
         it(
             'populate Dashboard with Applications data',
             fakeAsync(
-                inject([McmApplicationsService], (service: McmApplicationsService) => {
+                inject([JhiApplicationsService], (service: JhiApplicationsService) => {
                     spyOn(service, 'findAll').and.returnValue(
                         Observable.of({
                             status: null,

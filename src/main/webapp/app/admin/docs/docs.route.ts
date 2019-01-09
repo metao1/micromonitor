@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { McmDocsComponent } from './docs.component';
+import { JhiDocsComponent } from './docs.component';
 
 export const docsRoute: Route = {
     path: 'docs',
-    component: McmDocsComponent,
+    component: JhiDocsComponent,
     data: {
         pageTitle: 'API'
     }

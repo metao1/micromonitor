@@ -1,9 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
-import { McmEventManager, McmAlertService } from 'ng-mcmonitor';
+import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
-    selector: 'mcm-alert-error',
+    selector: 'jhi-alert-error',
     template: `
         <div class="alerts" role="alert">
             <div *ngFor="let alert of alerts"  [ngClass]="{\'alert.position\': true, \'toast\': alert.toast}">
@@ -13,14 +13,14 @@ import { Subscription } from 'rxjs/Rx';
             </div>
         </div>`
 })
-export class McmAlertErrorComponent implements OnDestroy {
+export class JhiAlertErrorComponent implements OnDestroy {
     alerts: any[];
     cleanHttpErrorListener: Subscription;
 
-    constructor(private alertService: McmAlertService, private eventManager: McmEventManager) {
+    constructor(private alertService: JhiAlertService, private eventManager: JhiEventManager) {
         this.alerts = [];
 
-        this.cleanHttpErrorListener = eventManager.subscribe('NgMcmonitorRegistryApp.httpError', (response) => {
+        this.cleanHttpErrorListener = eventManager.subscribe('NgJhipsterRegistryApp.httpError', (response) => {
             let i;
             const httpErrorResponse = response.content;
             switch (httpErrorResponse.status) {

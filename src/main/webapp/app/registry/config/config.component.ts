@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { McmConfigService } from './config.service';
+import { JhiConfigService } from './config.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
-import { McmApplicationsService } from '../';
-import { McmRefreshService } from 'app/shared/refresh/refresh.service';
+import { JhiApplicationsService } from '../';
+import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'mcm-config',
+    selector: 'jhi-config',
     templateUrl: './config.component.html'
 })
-export class McmConfigComponent implements OnInit, OnDestroy {
+export class JhiConfigComponent implements OnInit, OnDestroy {
     application: string;
     profile: string;
     label: string;
@@ -25,10 +25,10 @@ export class McmConfigComponent implements OnInit, OnDestroy {
     refreshReloadSubscription: Subscription;
 
     constructor(
-        private configService: McmConfigService,
+        private configService: JhiConfigService,
         private profileService: ProfileService,
-        private applicationsService: McmApplicationsService,
-        private refreshService: McmRefreshService
+        private applicationsService: JhiApplicationsService,
+        private refreshService: JhiRefreshService
     ) {
         this.application = 'application';
         this.profile = 'prod';

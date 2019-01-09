@@ -5,15 +5,15 @@ import { registerLocaleData } from '@angular/common';
 import locale from '@angular/common/locales/en';
 import {
     MicroMonitorRegistrySharedLibsModule,
-    McmAlertComponent,
-    McmAlertErrorComponent,
-    McmRouteSelectorComponent,
-    McmRefreshSelectorComponent
+    JhiAlertComponent,
+    JhiAlertErrorComponent,
+    JhiRouteSelectorComponent,
+    JhiRefreshSelectorComponent
 } from './';
 
 @NgModule({
     imports: [MicroMonitorRegistrySharedLibsModule],
-    declarations: [McmAlertComponent, McmAlertErrorComponent, McmRouteSelectorComponent, McmRefreshSelectorComponent, GroupByPipe],
+    declarations: [JhiAlertComponent, JhiAlertErrorComponent, JhiRouteSelectorComponent, JhiRefreshSelectorComponent, GroupByPipe],
     providers: [
         Title,
         {
@@ -23,10 +23,10 @@ import {
     ],
     exports: [
         MicroMonitorRegistrySharedLibsModule,
-        McmAlertComponent,
-        McmAlertErrorComponent,
-        McmRouteSelectorComponent,
-        McmRefreshSelectorComponent,
+        JhiAlertComponent,
+        JhiAlertErrorComponent,
+        JhiRouteSelectorComponent,
+        JhiRefreshSelectorComponent,
         GroupByPipe
     ]
 })

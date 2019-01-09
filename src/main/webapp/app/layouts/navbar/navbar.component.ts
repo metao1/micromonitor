@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Principal, LoginModalService, LoginService } from 'app/shared';
@@ -9,7 +9,7 @@ import { Principal, LoginModalService, LoginService } from 'app/shared';
 import { VERSION } from 'app/app.constants';
 
 @Component({
-    selector: 'mcm-navbar',
+    selector: 'jhi-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['navbar.scss']
 })
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private profileService: ProfileService,
-        private eventManager: McmEventManager,
+        private eventManager: JhiEventManager,
         private router: Router
     ) {
         this.version = VERSION ? 'v' + VERSION : '';

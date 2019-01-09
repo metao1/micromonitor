@@ -16,17 +16,17 @@ import {
     LoginOAuth2Service,
     Principal,
     HasAnyAuthorityDirective,
-    McmLoginModalComponent,
-    McmRoutesService,
-    McmRefreshService
+    JhiLoginModalComponent,
+    JhiRoutesService,
+    JhiRefreshService
 } from './';
 
 @NgModule({
     imports: [MicroMonitorRegistrySharedLibsModule, MicroMonitorRegistrySharedCommonModule],
-    declarations: [McmLoginModalComponent, HasAnyAuthorityDirective],
+    declarations: [JhiLoginModalComponent, HasAnyAuthorityDirective],
     providers: [
-        McmRoutesService,
-        McmRefreshService,
+        JhiRoutesService,
+        JhiRefreshService,
         AuthServerProvider,
         AuthSessionServerProvider,
         CookieService,
@@ -41,8 +41,8 @@ import {
         UserService,
         DatePipe
     ],
-    entryComponents: [McmLoginModalComponent],
-    exports: [MicroMonitorRegistrySharedCommonModule, McmLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
+    entryComponents: [JhiLoginModalComponent],
+    exports: [MicroMonitorRegistrySharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MicroMonitorRegistrySharedModule {}

@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { McmAlertService } from 'ng-mcmonitor';
+import { JhiAlertService } from 'ng-jhipster';
 
 @Component({
-    selector: 'mcm-alert',
+    selector: 'jhi-alert',
     template: `
         <div class="alerts" role="alert">
             <div *ngFor="let alert of alerts" [ngClass]="{\'alert.position\': true, \'toast\': alert.toast}">
@@ -10,10 +10,10 @@ import { McmAlertService } from 'ng-mcmonitor';
             </div>
         </div>`
 })
-export class McmAlertComponent implements OnInit, OnDestroy {
+export class JhiAlertComponent implements OnInit, OnDestroy {
     alerts: any[];
 
-    constructor(private alertService: McmAlertService) {}
+    constructor(private alertService: JhiAlertService) {}
 
     ngOnInit() {
         this.alerts = this.alertService.get();

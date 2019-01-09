@@ -1,17 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { McmEncryptionService } from './encryption.service';
+import { JhiEncryptionService } from './encryption.service';
 
 @Component({
-    selector: 'mcm-encryption',
+    selector: 'jhi-encryption',
     templateUrl: './encryption.component.html'
 })
-export class McmEncryptionComponent implements OnInit, OnDestroy {
+export class JhiEncryptionComponent implements OnInit, OnDestroy {
     showMore: boolean;
     textToEncrypt: string;
     encryptedText: string;
     result: string;
 
-    constructor(private encryptionService: McmEncryptionService) {
+    constructor(private encryptionService: JhiEncryptionService) {
         this.showMore = true;
         this.textToEncrypt = '';
         this.encryptedText = '';

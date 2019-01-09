@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { McmConfigurationComponent } from './configuration.component';
+import { JhiConfigurationComponent } from './configuration.component';
 
 export const configurationRoute: Route = {
-    path: 'mcm-configuration',
-    component: McmConfigurationComponent,
+    path: 'jhi-configuration',
+    component: JhiConfigurationComponent,
     data: {
         pageTitle: 'Cloud configuration'
     }

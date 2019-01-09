@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Route } from 'app/shared';
 
 @Injectable()
-export class McmConfigurationService {
+export class JhiConfigurationService {
     constructor(private http: HttpClient) {}
 
     getConfigs(prefix: String = ''): Observable<any> {

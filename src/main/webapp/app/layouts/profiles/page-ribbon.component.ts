@@ -3,7 +3,7 @@ import { ProfileService } from './profile.service';
 import { ProfileInfo } from './profile-info.model';
 
 @Component({
-    selector: 'mcm-page-ribbon',
+    selector: 'jhi-page-ribbon',
     template: `<div class="ribbon"><a href="">{{ribbonEnv}}</a></div>`,
     styleUrls: ['page-ribbon.scss']
 })

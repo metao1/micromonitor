@@ -2,27 +2,27 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { microMonitorRegistryTestModule } from '../../../test.module';
-import { McmHistoryComponent, McmHistoryService } from '../../../../../../main/webapp/app/registry';
+import { JhiHistoryComponent, JhiHistoryService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('HistoryComponent', () => {
-        let comp: McmHistoryComponent;
-        let fixture: ComponentFixture<McmHistoryComponent>;
+        let comp: JhiHistoryComponent;
+        let fixture: ComponentFixture<JhiHistoryComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [microMonitorRegistryTestModule],
-                    declarations: [McmHistoryComponent],
-                    providers: [McmHistoryService]
+                    declarations: [JhiHistoryComponent],
+                    providers: [JhiHistoryService]
                 })
-                    .overrideTemplate(McmHistoryComponent, '')
+                    .overrideTemplate(JhiHistoryComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(McmHistoryComponent);
+            fixture = TestBed.createComponent(JhiHistoryComponent);
             comp = fixture.componentInstance;
             fixture.detectChanges();
         });
@@ -30,7 +30,7 @@ describe('Component Tests', () => {
         it(
             'refresh data',
             fakeAsync(
-                inject([McmHistoryService], (service: McmHistoryService) => {
+                inject([JhiHistoryService], (service: JhiHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'
@@ -53,7 +53,7 @@ describe('Component Tests', () => {
         it(
             'activate registered tab',
             fakeAsync(
-                inject([McmHistoryService], (service: McmHistoryService) => {
+                inject([JhiHistoryService], (service: JhiHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'

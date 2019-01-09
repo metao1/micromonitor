@@ -6,34 +6,34 @@ import { MicroMonitorRegistrySharedModule } from 'app/shared';
 import {
     adminState,
     LogsComponent,
-    McmMetricsMonitoringModalComponent,
-    McmMetricsMonitoringComponent,
-    McmHealthModalComponent,
-    McmHealthCheckComponent,
-    McmConfigurationComponent,
-    McmDocsComponent,
-    McmConfigurationService,
-    McmLogfileComponent,
-    McmHealthService,
-    McmMetricsService,
+    JhiMetricsMonitoringModalComponent,
+    JhiMetricsMonitoringComponent,
+    JhiHealthModalComponent,
+    JhiHealthCheckComponent,
+    JhiConfigurationComponent,
+    JhiDocsComponent,
+    JhiConfigurationService,
+    JhiLogfileComponent,
+    JhiHealthService,
+    JhiMetricsService,
     LogsService,
-    McmLogfileService
+    JhiLogfileService
 } from './';
 
 @NgModule({
     imports: [MicroMonitorRegistrySharedModule, RouterModule.forChild(adminState)],
     declarations: [
         LogsComponent,
-        McmConfigurationComponent,
-        McmDocsComponent,
-        McmHealthCheckComponent,
-        McmHealthModalComponent,
-        McmMetricsMonitoringComponent,
-        McmMetricsMonitoringModalComponent,
-        McmLogfileComponent
+        JhiConfigurationComponent,
+        JhiDocsComponent,
+        JhiHealthCheckComponent,
+        JhiHealthModalComponent,
+        JhiMetricsMonitoringComponent,
+        JhiMetricsMonitoringModalComponent,
+        JhiLogfileComponent
     ],
-    entryComponents: [McmHealthModalComponent, McmMetricsMonitoringModalComponent],
-    providers: [McmConfigurationService, McmHealthService, McmMetricsService, LogsService, McmLogfileService],
+    entryComponents: [JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
+    providers: [JhiConfigurationService, JhiHealthService, JhiMetricsService, LogsService, JhiLogfileService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MicroMonitorRegistryAdminModule {}

@@ -1,14 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
-import { McmConfigurationService } from './configuration.service';
-import { McmRoutesService, Route } from 'app/shared';
+import { JhiConfigurationService } from './configuration.service';
+import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'mcm-configuration',
+    selector: 'jhi-configuration',
     templateUrl: './configuration.component.html'
 })
-export class McmConfigurationComponent implements OnInit, OnDestroy {
+export class JhiConfigurationComponent implements OnInit, OnDestroy {
     allConfiguration: any = null;
     configuration: any = null;
     configKeys: any[];
@@ -20,7 +20,7 @@ export class McmConfigurationComponent implements OnInit, OnDestroy {
     subscription: Subscription;
     updatingConfig: boolean;
 
-    constructor(private configurationService: McmConfigurationService, private routesService: McmRoutesService) {
+    constructor(private configurationService: JhiConfigurationService, private routesService: JhiRoutesService) {
         this.configKeys = [];
         this.filter = '';
         this.orderProp = 'prefix';

@@ -1,15 +1,15 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { McmLogfileService } from './logfile.service';
+import { JhiLogfileService } from './logfile.service';
 
-import { McmRoutesService, Route } from 'app/shared';
+import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'mcm-logfile',
+    selector: 'jhi-logfile',
     templateUrl: './logfile.component.html',
     styleUrls: ['logfile.scss']
 })
-export class McmLogfileComponent implements OnInit, OnDestroy {
+export class JhiLogfileComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     updatingLogfile: boolean;
     logtxt: string;
@@ -17,7 +17,7 @@ export class McmLogfileComponent implements OnInit, OnDestroy {
 
     @ViewChild('logfile') private logFileViewer: ElementRef;
 
-    constructor(private McmLogfileService: McmLogfileService, private routesService: McmRoutesService) {}
+    constructor(private JhiLogfileService: JhiLogfileService, private routesService: JhiRoutesService) {}
 
     ngOnInit() {
         this.subscription = this.routesService.routeChanged$.subscribe((route) => {
@@ -29,7 +29,7 @@ export class McmLogfileComponent implements OnInit, OnDestroy {
     displayActiveRouteLog() {
         this.updatingLogfile = true;
         if (this.activeRoute && this.activeRoute.status !== 'DOWN') {
-            this.McmLogfileService.getInstanceLogfile(this.activeRoute).subscribe(
+            this.JhiLogfileService.getInstanceLogfile(this.activeRoute).subscribe(
                 (logtxt) => {
                     this.logtxt = logtxt;
                     this.updatingLogfile = false;

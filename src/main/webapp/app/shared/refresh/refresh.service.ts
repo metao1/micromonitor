@@ -4,7 +4,7 @@ import { Subject } from 'rxjs/Subject';
 import { SessionStorageService } from 'ngx-webstorage';
 
 @Injectable()
-export class McmRefreshService {
+export class JhiRefreshService {
     // Observable sources
     private refreshChangedSource = new Subject<any>();
     private refreshReloadSource = new Subject<any>();

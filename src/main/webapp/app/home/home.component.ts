@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { Account, LoginModalService, Principal } from 'app/shared';
-import { McmHealthService } from 'app/admin';
-import { McmApplicationsService } from 'app/registry';
-import { McmRefreshService } from '../shared/refresh/refresh.service';
+import { JhiHealthService } from 'app/admin';
+import { JhiApplicationsService } from 'app/registry';
+import { JhiRefreshService } from '../shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 import { VERSION } from 'app/app.constants';
@@ -14,7 +14,7 @@ import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { LoginOAuth2Service } from 'app/shared/oauth2/login-oauth2.service';
 
 @Component({
-    selector: 'mcm-home',
+    selector: 'jhi-home',
     templateUrl: './home.component.html',
     styleUrls: ['home.scss']
 })
@@ -33,12 +33,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private loginOAuth2Service: LoginOAuth2Service,
-        private eventManager: McmEventManager,
+        private eventManager: JhiEventManager,
         private eurekaStatusService: EurekaStatusService,
-        private applicationsService: McmApplicationsService,
-        private healthService: McmHealthService,
+        private applicationsService: JhiApplicationsService,
+        private healthService: JhiHealthService,
         private profileService: ProfileService,
-        private refreshService: McmRefreshService
+        private refreshService: JhiRefreshService
     ) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.appInstances = [];

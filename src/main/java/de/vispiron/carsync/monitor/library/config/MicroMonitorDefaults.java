@@ -4,55 +4,118 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public interface MicroMonitorDefaults {
-    public interface Registry {
-        String password = null;
+
+    interface Async {
+
+        int corePoolSize = 2;
+        int maxPoolSize = 50;
+        int queueCapacity = 10000;
     }
 
-    public interface Ribbon {
-        String[] displayOnActiveProfiles = null;
+    interface Http {
+
+        MicroMonitorProperties.Http.Version version = MicroMonitorProperties.Http.Version.V_1_1;
+
+        boolean useUndertowUserCipherSuitesOrder = true;
+
+        interface Cache {
+
+            int timeToLiveInDays = 1461; // 4 years (including leap day)
+        }
     }
 
-    public interface Gateway {
-        Map<String, List<String>> authorizedMicroservicesEndpoints = new LinkedHashMap();
+    interface Cache {
 
-        public interface RateLimiting {
+        interface Hazelcast {
+
+            int timeToLiveSeconds = 3600; // 1 hour
+            int backupCount = 1;
+
+            interface ManagementCenter {
+
+                boolean enabled = false;
+                int updateInterval = 3;
+                String url = "";
+            }
+        }
+
+        interface Ehcache {
+
+            int timeToLiveSeconds = 3600; // 1 hour
+            long maxEntries = 100;
+        }
+
+        interface Infinispan {
+
+            String configFile = "default-configs/default-jgroups-tcp.xml";
+            boolean statsEnabled = false;
+
+            interface Local {
+
+                long timeToLiveSeconds = 60; // 1 minute
+                long maxEntries = 100;
+            }
+
+            interface Distributed {
+
+                long timeToLiveSeconds = 60; // 1 minute
+                long maxEntries = 100;
+                int instanceCount = 1;
+            }
+
+            interface Replicated {
+
+                long timeToLiveSeconds = 60; // 1 minute
+                long maxEntries = 100;
+            }
+        }
+
+        interface Memcached {
+
             boolean enabled = false;
-            long limit = 100000L;
-            int durationInSeconds = 3600;
+            String servers = "localhost:11211";
+            int expiration = 300; // 5 minutes
+            boolean useBinaryProtocol = true;
         }
     }
 
-    public interface Social {
-        String redirectAfterSignIn = "/#/home";
+    interface Mail {
+        boolean enabled = false;
+        String from = "";
+        String baseUrl = "";
     }
 
-    public interface Logging {
-        public interface Logstash {
-            boolean enabled = false;
-            String host = "localhost";
-            int port = 5000;
-            int queueSize = 512;
+    interface Security {
+
+        interface ClientAuthorization {
+
+            String accessTokenUri = null;
+            String tokenServiceId = null;
+            String clientId = null;
+            String clientSecret = null;
+        }
+
+        interface Authentication {
+
+            interface Jwt {
+
+                String secret = null;
+                String base64Secret = null;
+                long tokenValidityInSeconds = 1800; // 0.5 hour
+                long tokenValidityInSecondsForRememberMe = 2592000; // 30 hours;
+            }
+        }
+
+        interface RememberMe {
+
+            String key = null;
         }
     }
 
-    public interface Metrics {
-        public interface Prometheus {
-            boolean enabled = false;
-            String endpoint = "/prometheusMetrics";
-        }
+    interface Swagger {
 
-        public interface Logs {
-            boolean enabled = false;
-            long reportFrequency = 60L;
-        }
-
-        public interface Jmx {
-            boolean enabled = true;
-        }
-    }
-
-    public interface Swagger {
         String title = "Application API";
         String description = "API documentation";
         String version = "0.0.1";
@@ -64,96 +127,67 @@ public interface MicroMonitorDefaults {
         String licenseUrl = null;
         String defaultIncludePattern = "/api/.*";
         String host = null;
-        String[] protocols = new String[0];
+        String[] protocols = {};
         boolean useDefaultResponseMessages = true;
     }
 
-    public interface Security {
-        public interface RememberMe {
-            String key = null;
+    interface Metrics {
+
+        interface Jmx {
+
+            boolean enabled = true;
         }
 
-        public interface Authentication {
-            public interface Jwt {
-                String secret = null;
-                String base64Secret = null;
-                long tokenValidityInSeconds = 1800L;
-                long tokenValidityInSecondsForRememberMe = 2592000L;
-            }
-        }
+        interface Logs {
 
-        public interface ClientAuthorization {
-            String accessTokenUri = null;
-            String tokenServiceId = null;
-            String clientId = null;
-            String clientSecret = null;
-        }
-    }
-
-    public interface Mail {
-        boolean enabled = false;
-        String from = "";
-        String baseUrl = "";
-    }
-
-    public interface Cache {
-        public interface Memcached {
             boolean enabled = false;
-            String servers = "localhost:11211";
-            int expiration = 300;
-            boolean useBinaryProtocol = true;
+            long reportFrequency = 60;
+
         }
 
-        public interface Infinispan {
-            String configFile = "default-configs/default-jgroups-tcp.xml";
-            boolean statsEnabled = false;
+        interface Prometheus {
 
-            public interface Replicated {
-                long timeToLiveSeconds = 60L;
-                long maxEntries = 100L;
-            }
-
-            public interface Distributed {
-                long timeToLiveSeconds = 60L;
-                long maxEntries = 100L;
-                int instanceCount = 1;
-            }
-
-            public interface Local {
-                long timeToLiveSeconds = 60L;
-                long maxEntries = 100L;
-            }
-        }
-
-        public interface Ehcache {
-            int timeToLiveSeconds = 3600;
-            long maxEntries = 100L;
-        }
-
-        public interface Hazelcast {
-            int timeToLiveSeconds = 3600;
-            int backupCount = 1;
-
-            public interface ManagementCenter {
-                boolean enabled = false;
-                int updateInterval = 3;
-                String url = "";
-            }
+            boolean enabled = false;
+            String endpoint = "/prometheusMetrics";
         }
     }
 
-    public interface Http {
-        MicroMonitorProperties.Http.Version version = MicroMonitorProperties.Http.Version.V_1_1;
-        boolean useUndertowUserCipherSuitesOrder = true;
+    interface Logging {
 
-        public interface Cache {
-            int timeToLiveInDays = 1461;
+        interface Logstash {
+
+            boolean enabled = false;
+            String host = "localhost";
+            int port = 5000;
+            int queueSize = 512;
         }
     }
 
-    public interface Async {
-        int corePoolSize = 2;
-        int maxPoolSize = 50;
-        int queueCapacity = 10000;
+    interface Social {
+
+        String redirectAfterSignIn = "/#/home";
+    }
+
+    interface Gateway {
+
+        Map<String, List<String>> authorizedMicroservicesEndpoints = new LinkedHashMap<>();
+
+        interface RateLimiting {
+
+            boolean enabled = false;
+            long limit = 100_000L;
+            int durationInSeconds = 3_600;
+
+        }
+    }
+
+    interface Ribbon {
+
+        String[] displayOnActiveProfiles = null;
+    }
+
+    interface Registry {
+
+        String password = null;
     }
 }

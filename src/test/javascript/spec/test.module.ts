@@ -3,12 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgModule, ElementRef, Renderer } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { SessionStorageService } from 'ngx-webstorage';
-import { McmRefreshService } from '../../../main/webapp/app/shared/refresh/refresh.service';
+import { JhiRefreshService } from '../../../main/webapp/app/shared/refresh/refresh.service';
 import { LoginOAuth2Service } from '../../../main/webapp/app/shared/oauth2/login-oauth2.service';
 import { AuthSessionServerProvider } from '../../../main/webapp/app/core/auth/auth-session.service';
 import { ProfileService } from '../../../main/webapp/app/layouts/profiles/profile.service';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { McmDataUtils, McmDateUtils, McmEventManager, McmAlertService, McmParseLinks } from 'ng-mcmonitor';
+import { JhiDataUtils, JhiDateUtils, JhiEventManager, JhiAlertService, JhiParseLinks } from 'ng-jhipster';
 
 import { Principal, AccountService, LoginModalService } from '../../../main/webapp/app/shared';
 import { MockPrincipal } from './helpers/mock-principal.service';
@@ -20,16 +20,16 @@ import { MockEventManager } from './helpers/mock-event-manager.service';
 @NgModule({
     providers: [
         DatePipe,
-        McmDataUtils,
-        McmDateUtils,
-        McmParseLinks,
+        JhiDataUtils,
+        JhiDateUtils,
+        JhiParseLinks,
         SessionStorageService,
-        McmRefreshService,
+        JhiRefreshService,
         LoginOAuth2Service,
         AuthSessionServerProvider,
         ProfileService,
         {
-            provide: McmEventManager,
+            provide: JhiEventManager,
             useClass: MockEventManager
         },
         {
@@ -65,7 +65,7 @@ import { MockEventManager } from './helpers/mock-event-manager.service';
             useValue: null
         },
         {
-            provide: McmAlertService,
+            provide: JhiAlertService,
             useValue: null
         },
         {

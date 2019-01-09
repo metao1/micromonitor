@@ -5,32 +5,32 @@ import { CommonModule } from '@angular/common';
 
 import {
     registryState,
-    McmApplicationsComponent,
-    McmConfigComponent,
-    McmEncryptionComponent,
-    McmHistoryComponent,
-    McmReplicasComponent,
-    McmSSHComponent,
-    McmApplicationsService,
-    McmConfigService,
-    McmEncryptionService,
-    McmHistoryService,
-    McmReplicasService,
-    McmSSHService
+    JhiApplicationsComponent,
+    JhiConfigComponent,
+    JhiEncryptionComponent,
+    JhiHistoryComponent,
+    JhiReplicasComponent,
+    JhiSSHComponent,
+    JhiApplicationsService,
+    JhiConfigService,
+    JhiEncryptionService,
+    JhiHistoryService,
+    JhiReplicasService,
+    JhiSSHService
 } from './';
 
 @NgModule({
     imports: [MicroMonitorRegistrySharedModule, CommonModule, RouterModule.forRoot(registryState, { useHash: true })],
     declarations: [
-        McmApplicationsComponent,
-        McmConfigComponent,
-        McmEncryptionComponent,
-        McmHistoryComponent,
-        McmReplicasComponent,
-        McmSSHComponent
+        JhiApplicationsComponent,
+        JhiConfigComponent,
+        JhiEncryptionComponent,
+        JhiHistoryComponent,
+        JhiReplicasComponent,
+        JhiSSHComponent
     ],
     entryComponents: [],
-    providers: [McmApplicationsService, McmConfigService, McmEncryptionService, McmHistoryService, McmReplicasService, McmSSHService],
+    providers: [JhiApplicationsService, JhiConfigService, JhiEncryptionService, JhiHistoryService, JhiReplicasService, JhiSSHService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MicroMonitorRegistryModule {}

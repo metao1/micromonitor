@@ -5,12 +5,12 @@ import { MicroMonitorRegistrySharedModule } from 'app/shared';
 
 import { HOME_ROUTE, HomeComponent } from './';
 import { EurekaStatusService } from './eureka.status.service';
-import { McmLoginModalComponent } from 'app/core/login/login.component';
+import { JhiLoginModalComponent } from 'app/core/login/login.component';
 
 @NgModule({
     imports: [MicroMonitorRegistrySharedModule, RouterModule.forRoot([HOME_ROUTE], { useHash: true })],
     declarations: [HomeComponent],
-    entryComponents: [McmLoginModalComponent],
+    entryComponents: [JhiLoginModalComponent],
     providers: [EurekaStatusService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

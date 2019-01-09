@@ -6,7 +6,7 @@ import { Route } from './route.model';
 import { SessionStorageService } from 'ngx-webstorage';
 
 @Injectable()
-export class McmRoutesService {
+export class JhiRoutesService {
     // Observable sources
     private routeChangedSource = new Subject<Route>();
     private routeDownSource = new Subject<Route>();

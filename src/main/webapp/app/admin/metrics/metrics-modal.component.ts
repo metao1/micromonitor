@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    selector: 'mcm-metrics-modal',
+    selector: 'jhi-metrics-modal',
     templateUrl: './metrics-modal.component.html'
 })
-export class McmMetricsMonitoringModalComponent implements OnInit {
+export class JhiMetricsMonitoringModalComponent implements OnInit {
     threadDumpFilter: any;
     threadDump: any;
     threadDumpAll = 0;

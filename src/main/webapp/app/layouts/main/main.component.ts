@@ -5,14 +5,15 @@ import { Title } from '@angular/platform-browser';
 import { StateStorageService } from 'app/shared';
 
 @Component({
-    selector: 'Mcm-main',
+    selector: 'jhi-main',
     templateUrl: './main.component.html'
 })
-export class McmMainComponent implements OnInit {
+export class JhiMainComponent implements OnInit {
     constructor(private titleService: Title, private router: Router, private $storageService: StateStorageService) {}
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
-        let title: string = routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'NgMcmonitorRegistryApp';
+        let title: string =
+            routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'NgJhipsterRegistryApp';
         if (routeSnapshot.firstChild) {
             title = this.getPageTitle(routeSnapshot.firstChild) || title;
         }

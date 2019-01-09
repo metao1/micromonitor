@@ -1,7 +1,6 @@
 # ===================================================================
 # MicroMonitor Sample Spring Cloud Config.
 # ===================================================================
-
 spring:
     application:
         name: micromonitor
@@ -16,16 +15,9 @@ micromonitor:
     security:
         authentication:
             jwt:
-                # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
                 base64-secret: 4W9YQ2ZjCPDBESsl0FdwijQ2Ifvquhmhm1hU+nCXuoBaxTs3bxcXiatnpJjAy8226K6xEWJoBlk9tYgH19d/Bg==
-                # It is recommended to encrypt the secret key in Base64, using the property above.
-                # For compabitibily issues with applications generated with older microMonitor releases,
-                # you can use both `base64-secret` and `secret` fields.
                 secret: microservice_secret_key
-                # Token is valid 24 hours
                 token-validity-in-seconds: 86400
-
-# Enable /management/logfile endpoint for all apps
 logging:
     config: classpath:logback-spring.xml
     path: logs

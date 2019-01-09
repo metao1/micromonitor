@@ -4,10 +4,10 @@ import { Subscription } from 'rxjs/Subscription';
 import { Log } from './log.model';
 import { LogsService } from './logs.service';
 
-import { McmRoutesService, Route } from 'app/shared';
+import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'mcm-logs',
+    selector: 'jhi-logs',
     templateUrl: './logs.component.html'
 })
 export class LogsComponent implements OnInit, OnDestroy {
@@ -20,7 +20,7 @@ export class LogsComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     subscription: Subscription;
 
-    constructor(private logsService: LogsService, private routesService: McmRoutesService) {
+    constructor(private logsService: LogsService, private routesService: JhiRoutesService) {
         this.filter = '';
         this.orderProp = 'name';
         this.reverse = false;

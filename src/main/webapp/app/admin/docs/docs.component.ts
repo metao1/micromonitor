@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'mcm-docs',
+    selector: 'jhi-docs',
     templateUrl: './docs.component.html'
 })
-export class McmDocsComponent {
+export class JhiDocsComponent {
     constructor() {}
 }

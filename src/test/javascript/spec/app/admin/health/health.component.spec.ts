@@ -1,32 +1,32 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { microMonitorRegistryTestModule } from '../../../test.module';
-import { McmHealthCheckComponent } from 'app/admin/health/health.component';
-import { McmHealthService } from 'app/admin/health/health.service';
-import { McmRoutesService } from 'app/shared/routes/routes.service';
+import { JhiHealthCheckComponent } from 'app/admin/health/health.component';
+import { JhiHealthService } from 'app/admin/health/health.service';
+import { JhiRoutesService } from 'app/shared/routes/routes.service';
 
 describe('Component Tests', () => {
-    describe('McmHealthCheckComponent', () => {
-        let comp: McmHealthCheckComponent;
-        let fixture: ComponentFixture<McmHealthCheckComponent>;
-        let service: McmHealthService;
+    describe('JhiHealthCheckComponent', () => {
+        let comp: JhiHealthCheckComponent;
+        let fixture: ComponentFixture<JhiHealthCheckComponent>;
+        let service: JhiHealthService;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [microMonitorRegistryTestModule],
-                    declarations: [McmHealthCheckComponent],
-                    providers: [McmHealthService, McmRoutesService]
+                    declarations: [JhiHealthCheckComponent],
+                    providers: [JhiHealthService, JhiRoutesService]
                 })
-                    .overrideTemplate(McmHealthCheckComponent, '')
+                    .overrideTemplate(JhiHealthCheckComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(McmHealthCheckComponent);
+            fixture = TestBed.createComponent(JhiHealthCheckComponent);
             comp = fixture.componentInstance;
-            service = fixture.debugElement.injector.get(McmHealthService);
+            service = fixture.debugElement.injector.get(JhiHealthService);
             fixture.detectChanges();
         });
 

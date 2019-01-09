@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Route } from 'app/shared';
 
 @Injectable()
-export class McmHealthService {
+export class JhiHealthService {
     separator: string;
 
     constructor(private http: HttpClient) {

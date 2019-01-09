@@ -37,7 +37,7 @@ import {
         UserRouteAccessService
     ]
 })
-export class NgMcmonitorCoreModule {
+export class NgJhipsterCoreModule {
     constructor() {
         registerLocaleData(locale);
     }

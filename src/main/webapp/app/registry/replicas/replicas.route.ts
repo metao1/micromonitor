@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { McmReplicasComponent } from './replicas.component';
+import { JhiReplicasComponent } from './replicas.component';
 
 export const replicasRoute: Route = {
     path: 'replicas',
-    component: McmReplicasComponent,
+    component: JhiReplicasComponent,
     data: {
         pageTitle: 'Replicas'
     }

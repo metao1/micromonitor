@@ -1,8 +1,3 @@
-# ===================================================================
-# Spring Cloud Config bootstrap configuration for the "dev" profile
-# In prod profile, properties will be overwriten by the ones defined in bootstrap-prod.yml
-# ===================================================================
-
 spring:
     application:
         name: MicroMonitor
@@ -28,6 +23,5 @@ info:
     project:
         version: #project.version#
 
-# uncomment to enable encryption features
 #encrypt:
 #    key: my-secret-encryption-key-to-change-in-production

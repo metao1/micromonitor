@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class McmEncryptionService {
+export class JhiEncryptionService {
     constructor(private http: HttpClient) {}
 
     encrypt(textToEncrypt: string): Observable<string> {

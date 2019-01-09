@@ -1,16 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { McmRoutesService } from './routes.service';
+import { JhiRoutesService } from './routes.service';
 import { Route } from './route.model';
 import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
-import { McmRefreshService } from 'app/shared/refresh/refresh.service';
+import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 
 @Component({
-    selector: 'mcm-route-selector',
+    selector: 'jhi-route-selector',
     templateUrl: './route-selector.component.html',
     styleUrls: ['route-selector.component.scss']
 })
-export class McmRouteSelectorComponent implements OnInit, OnDestroy {
+export class JhiRouteSelectorComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     routes: Route[];
     savedRoutes: Route[];
@@ -21,7 +21,7 @@ export class McmRouteSelectorComponent implements OnInit, OnDestroy {
 
     refreshReloadSubscription: Subscription;
 
-    constructor(private routesService: McmRoutesService, private refreshService: McmRefreshService) {}
+    constructor(private routesService: JhiRoutesService, private refreshService: JhiRefreshService) {}
 
     ngOnInit() {
         this.activeRoute = this.routesService.getSelectedInstance();

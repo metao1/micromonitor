@@ -1,16 +1,16 @@
 import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { LoginService } from './login.service';
 import { StateStorageService } from 'app/core/auth/state-storage.service';
 
 @Component({
-    selector: 'mcm-login-modal',
+    selector: 'jhi-login-modal',
     templateUrl: './login.component.html'
 })
-export class McmLoginModalComponent implements OnInit, AfterViewInit {
+export class JhiLoginModalComponent implements OnInit, AfterViewInit {
     authenticationError: boolean;
     password: string;
     rememberMe: boolean;
@@ -18,7 +18,7 @@ export class McmLoginModalComponent implements OnInit, AfterViewInit {
     credentials: any;
 
     constructor(
-        private eventManager: McmEventManager,
+        private eventManager: JhiEventManager,
         private loginService: LoginService,
         private stateStorageService: StateStorageService,
         private elementRef: ElementRef,

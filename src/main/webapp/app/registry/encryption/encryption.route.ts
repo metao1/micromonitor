@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { McmEncryptionComponent } from './encryption.component';
+import { JhiEncryptionComponent } from './encryption.component';
 
 export const encryptionRoute: Route = {
     path: 'encryption',
-    component: McmEncryptionComponent,
+    component: JhiEncryptionComponent,
     data: {
         pageTitle: 'Encryption'
     }

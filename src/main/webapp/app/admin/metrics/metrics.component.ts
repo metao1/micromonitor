@@ -2,15 +2,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { McmMetricsMonitoringModalComponent } from './metrics-modal.component';
-import { McmMetricsService } from './metrics.service';
-import { McmRoutesService, Route } from 'app/shared';
+import { JhiMetricsMonitoringModalComponent } from './metrics-modal.component';
+import { JhiMetricsService } from './metrics.service';
+import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'mcm-metrics',
+    selector: 'jhi-metrics',
     templateUrl: './metrics.component.html'
 })
-export class McmMetricsMonitoringComponent implements OnInit, OnDestroy {
+export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
     metrics: any = {};
     cachesStats: any = {};
     servicesStats: any = {};
@@ -20,7 +20,7 @@ export class McmMetricsMonitoringComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     subscription: Subscription;
 
-    constructor(private modalService: NgbModal, private metricsService: McmMetricsService, private routesService: McmRoutesService) {
+    constructor(private modalService: NgbModal, private metricsService: JhiMetricsService, private routesService: JhiRoutesService) {
         this.JCACHE_KEY = 'jcache.statistics';
     }
 
@@ -80,7 +80,7 @@ export class McmMetricsMonitoringComponent implements OnInit, OnDestroy {
 
     refreshThreadDumpData() {
         this.metricsService.instanceThreadDump(this.activeRoute).subscribe((data) => {
-            const modalRef = this.modalService.open(McmMetricsMonitoringModalComponent, { size: 'lg' });
+            const modalRef = this.modalService.open(JhiMetricsMonitoringModalComponent, { size: 'lg' });
             modalRef.componentInstance.threadDump = data.threads;
             modalRef.result.then(
                 (result) => {

@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { McmHistoryComponent } from './history.component';
+import { JhiHistoryComponent } from './history.component';
 
 export const historyRoute: Route = {
     path: 'history',
-    component: McmHistoryComponent,
+    component: JhiHistoryComponent,
     data: {
         pageTitle: 'History'
     }

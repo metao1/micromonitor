@@ -4,7 +4,7 @@ import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService } from 'ngx-webstorage';
-import { McmEventManager } from 'ng-mcmonitor';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
@@ -18,19 +18,19 @@ import { MicroMonitorRegistryModule } from './registry/registry.module';
 
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
-import { McmMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
+import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
 
 @NgModule({
     imports: [
         BrowserModule,
         MicroMonitorRegistryAppRoutingModule,
-        Ng2Webstorage.forRoot({ prefix: 'Mcm', separator: '-' }),
+        Ng2Webstorage.forRoot({ prefix: 'Jhi', separator: '-' }),
         MicroMonitorRegistrySharedModule,
         MicroMonitorRegistryHomeModule,
         MicroMonitorRegistryAdminModule,
         MicroMonitorRegistryModule
     ],
-    declarations: [McmMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
         ProfileService,
         PaginationConfig,
@@ -51,7 +51,7 @@ import { McmMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             provide: HTTP_INTERCEPTORS,
             useClass: ErrorHandlerInterceptor,
             multi: true,
-            deps: [McmEventManager]
+            deps: [JhiEventManager]
         },
         {
             provide: HTTP_INTERCEPTORS,
@@ -60,6 +60,6 @@ import { McmMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             deps: [Injector]
         }
     ],
-    bootstrap: [McmMainComponent]
+    bootstrap: [JhiMainComponent]
 })
 export class MicroMonitorRegistryAppModule {}
