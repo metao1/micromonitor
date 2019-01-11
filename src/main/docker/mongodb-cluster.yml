@@ -13,4 +13,4 @@ services:
     micro-mongodb-config:
         image: mongo:4.0.2
         container_name: micro-mongodb-config
-        command: mongo  -u "myUserAdmin" -p "abc123" --authenticationDatabase "admin"
+        command: mongo  -u "vispiron" -p "vispiron@Kiosk123" --authenticationDatabase "admin"

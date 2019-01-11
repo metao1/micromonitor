@@ -6,7 +6,7 @@ import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'jhi-applications',
+    selector: 'mcm-applications',
     templateUrl: './applications.component.html',
     styleUrls: ['applications.component.scss']
 })

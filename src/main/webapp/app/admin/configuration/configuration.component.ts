@@ -5,7 +5,7 @@ import { JhiConfigurationService } from './configuration.service';
 import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'jhi-configuration',
+    selector: 'mcm-configuration',
     templateUrl: './configuration.component.html'
 })
 export class JhiConfigurationComponent implements OnInit, OnDestroy {

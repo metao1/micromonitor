@@ -7,7 +7,7 @@ import { JhiMetricsService } from './metrics.service';
 import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'jhi-metrics',
+    selector: 'mcm-metrics',
     templateUrl: './metrics.component.html'
 })
 export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {

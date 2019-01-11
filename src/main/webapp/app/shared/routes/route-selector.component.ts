@@ -6,7 +6,7 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 
 @Component({
-    selector: 'jhi-route-selector',
+    selector: 'mcm-route-selector',
     templateUrl: './route-selector.component.html',
     styleUrls: ['route-selector.component.scss']
 })

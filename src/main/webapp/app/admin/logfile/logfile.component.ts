@@ -5,7 +5,7 @@ import { JhiLogfileService } from './logfile.service';
 import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'jhi-logfile',
+    selector: 'mcm-logfile',
     templateUrl: './logfile.component.html',
     styleUrls: ['logfile.scss']
 })

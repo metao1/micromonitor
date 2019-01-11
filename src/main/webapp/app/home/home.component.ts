@@ -14,7 +14,7 @@ import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { LoginOAuth2Service } from 'app/shared/oauth2/login-oauth2.service';
 
 @Component({
-    selector: 'jhi-home',
+    selector: 'mcm-home',
     templateUrl: './home.component.html',
     styleUrls: ['home.scss']
 })

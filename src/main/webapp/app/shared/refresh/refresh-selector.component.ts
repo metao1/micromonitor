@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Rx';
 import { JhiRefreshService } from './refresh.service';
 
 @Component({
-    selector: 'jhi-refresh-selector',
+    selector: 'mcm-refresh-selector',
     templateUrl: './refresh-selector.component.html',
     styleUrls: ['refresh-selector.component.scss']
 })

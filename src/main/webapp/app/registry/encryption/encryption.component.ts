@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { JhiEncryptionService } from './encryption.service';
 
 @Component({
-    selector: 'jhi-encryption',
+    selector: 'mcm-encryption',
     templateUrl: './encryption.component.html'
 })
 export class JhiEncryptionComponent implements OnInit, OnDestroy {

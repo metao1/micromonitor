@@ -7,7 +7,7 @@ import { LogsService } from './logs.service';
 import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'jhi-logs',
+    selector: 'mcm-logs',
     templateUrl: './logs.component.html'
 })
 export class LogsComponent implements OnInit, OnDestroy {

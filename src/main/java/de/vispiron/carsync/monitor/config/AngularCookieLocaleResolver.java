@@ -1,15 +1,16 @@
 package de.vispiron.carsync.monitor.config;
 
-import java.util.Locale;
-import java.util.TimeZone;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.i18n.LocaleContext;
 import org.springframework.context.i18n.TimeZoneAwareLocaleContext;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.util.WebUtils;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class AngularCookieLocaleResolver extends CookieLocaleResolver {
     public static final String QUOTE = "%22";

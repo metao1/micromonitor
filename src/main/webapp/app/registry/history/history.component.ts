@@ -5,7 +5,7 @@ import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'jhi-history',
+    selector: 'mcm-history',
     templateUrl: './history.component.html'
 })
 export class JhiHistoryComponent implements OnInit, OnDestroy {

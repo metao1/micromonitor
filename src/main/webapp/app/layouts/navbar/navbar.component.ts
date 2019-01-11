@@ -9,7 +9,7 @@ import { Principal, LoginModalService, LoginService } from 'app/shared';
 import { VERSION } from 'app/app.constants';
 
 @Component({
-    selector: 'jhi-navbar',
+    selector: 'mcm-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['navbar.scss']
 })

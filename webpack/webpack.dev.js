@@ -114,7 +114,7 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
         ]),
         new WebpackNotifierPlugin({
             title: 'micromonitor',
-            contentImage: path.join(__dirname, 'logo-micromonitor.png')
+            contentImage: path.join(__dirname, 'micromonitor.svg')
         })
     ],
     mode: 'development'

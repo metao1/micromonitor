@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JhiSSHService } from './ssh.service';
 
 @Component({
-    selector: 'jhi-applications',
+    selector: 'mcm-applications',
     templateUrl: './ssh.component.html'
 })
 export class JhiSSHComponent implements OnInit {

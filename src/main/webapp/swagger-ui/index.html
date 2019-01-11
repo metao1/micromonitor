@@ -105,7 +105,7 @@
                             window.swaggerUi.api.clientAuthorizations.add("key", apiKeyAuth);
                         } else {
                             // working only with JWT authentication
-                            var authToken = JSON.parse(localStorage.getItem("jhi-authenticationtoken") || sessionStorage.getItem("jhi-authenticationtoken"));
+                            var authToken = JSON.parse(localStorage.getItem("mcm-authenticationtoken") || sessionStorage.getItem("mcm-authenticationtoken"));
                             var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("Authorization", "Bearer " + authToken, "header");
                             window.swaggerUi.api.clientAuthorizations.add("bearer", apiKeyAuth);
                         }

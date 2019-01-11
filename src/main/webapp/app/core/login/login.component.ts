@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 import { StateStorageService } from 'app/core/auth/state-storage.service';
 
 @Component({
-    selector: 'jhi-login-modal',
+    selector: 'mcm-login-modal',
     templateUrl: './login.component.html'
 })
 export class JhiLoginModalComponent implements OnInit, AfterViewInit {

@@ -15,7 +15,7 @@
 
 spring:
     application:
-        name: microMonitorRegistry
+        name: micromonitor
     cloud:
         config:
             enabled: false
@@ -44,7 +44,7 @@ eureka:
     server:
         enable-self-preservation: false
     instance:
-        instanceId: microMonitorRegistry
+        instanceId: micromonitor
 management:
     endpoints:
         web:
@@ -73,14 +73,3 @@ micromonitor:
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-
-# ===================================================================
-# Application specific properties
-# Add your own application properties here, see the ApplicationProperties class
-# to have type-safe configuration, like in the MicroMonitorProperties above
-#
-# More documentation is available at:
-# https://www.vispiron.de/common-application-properties/
-# ===================================================================
-
-# application:

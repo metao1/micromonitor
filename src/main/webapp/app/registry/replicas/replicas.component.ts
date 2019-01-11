@@ -4,7 +4,7 @@ import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'jhi-replicas',
+    selector: 'mcm-replicas',
     templateUrl: './replicas.component.html',
     styleUrls: ['replicas.component.scss']
 })

@@ -6,7 +6,7 @@ import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'jhi-config',
+    selector: 'mcm-config',
     templateUrl: './config.component.html'
 })
 export class JhiConfigComponent implements OnInit, OnDestroy {

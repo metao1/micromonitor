@@ -5,7 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { StateStorageService } from 'app/shared';
 
 @Component({
-    selector: 'jhi-main',
+    selector: 'mcm-main',
     templateUrl: './main.component.html'
 })
 export class JhiMainComponent implements OnInit {

@@ -24,7 +24,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
     imports: [
         BrowserModule,
         MicroMonitorRegistryAppRoutingModule,
-        Ng2Webstorage.forRoot({ prefix: 'Jhi', separator: '-' }),
+        Ng2Webstorage.forRoot({ prefix: 'Mcm', separator: '-' }),
         MicroMonitorRegistrySharedModule,
         MicroMonitorRegistryHomeModule,
         MicroMonitorRegistryAdminModule,

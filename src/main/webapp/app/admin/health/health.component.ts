@@ -8,7 +8,7 @@ import { JhiHealthModalComponent } from './health-modal.component';
 import { JhiRoutesService, Route } from 'app/shared';
 
 @Component({
-    selector: 'jhi-health',
+    selector: 'mcm-health',
     templateUrl: './health.component.html'
 })
 export class JhiHealthCheckComponent implements OnInit, OnDestroy {
