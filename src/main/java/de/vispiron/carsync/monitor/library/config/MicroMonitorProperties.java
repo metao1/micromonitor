@@ -330,7 +330,7 @@ public class MicroMonitorProperties {
             this.license = MicroMonitorDefaults.Swagger.license;
             this.licenseUrl = MicroMonitorDefaults.Swagger.licenseUrl;
             this.defaultIncludePattern = "/api/.*";
-            this.host =  MicroMonitorDefaults.Swagger.host;
+            this.host = MicroMonitorDefaults.Swagger.host;
             this.protocols = MicroMonitorDefaults.Swagger.protocols;
             this.useDefaultResponseMessages = true;
         }
