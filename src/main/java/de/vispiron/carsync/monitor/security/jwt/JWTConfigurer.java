@@ -1,5 +1,6 @@
 package de.vispiron.carsync.monitor.security.jwt;
 
+import de.vispiron.carsync.monitor.config.MicroMonitorCORSFilter;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.DefaultSecurityFilterChain;
@@ -18,6 +19,10 @@ public class JWTConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilt
     @Override
     public void configure(HttpSecurity http) throws Exception {
         JWTFilter customFilter = new JWTFilter(tokenProvider);
-        http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(new MicroMonitorCORSFilter(), UsernamePasswordAuthenticationFilter.class)
+            .headers()
+            .cacheControl();
+
     }
 }

@@ -105,19 +105,19 @@ public class JWTSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
             .exceptionHandling()
             .authenticationEntryPoint(authenticationEntryPoint)
-        .and()
+            .and()
             .csrf()
             .disable()
             .headers()
             .frameOptions()
             .disable()
-        .and()
+            .and()
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-         .and()
+            .and()
             .httpBasic()
             .realmName("MicroMonitor")
-        .and()
+            .and()
             .authorizeRequests()
             .antMatchers("/eureka/**").hasAuthority(AuthoritiesConstants.ADMIN)
             .antMatchers("/config/**").hasAuthority(AuthoritiesConstants.ADMIN)
@@ -131,7 +131,7 @@ public class JWTSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/swagger-ui/index.html").hasAuthority(AuthoritiesConstants.ADMIN)
             .antMatchers("/*").permitAll()
             .anyRequest().authenticated()
-        .and()
+            .and()
             .apply(securityConfigurerAdapter());
     }
 

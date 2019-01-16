@@ -106,13 +106,13 @@ eureka:
         fetch-registry: true
         register-with-eureka: true
         serviceUrl:
-            defaultZone: http://admin:admin@eureka-peer-2:8762/eureka/</pre>
+            defaultZone: http://admin:admin@eureka-peer-2:8761/eureka/</pre>
         <p>
             Here is the same configuration for "peer2", which has a "serviceUrl" pointing to "peer1":
         </p>
         <pre class="code-block">
 server:
-    port: 8762
+    port: 8761
 eureka:
     instance:
         hostname: eureka-peer-2

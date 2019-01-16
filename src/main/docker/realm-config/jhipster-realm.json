@@ -65,7 +65,7 @@
         } ],
         "client" : {
             "internal" : [ {
-                "id" : "2692bdb6-d5f1-4414-8e1a-0d1338ec8762",
+                "id" : "2692bdb6-d5f1-4414-8e1a-0d1338ec8761",
                 "name" : "uma_protection",
                 "scopeParamRequired" : false,
                 "composite" : false,

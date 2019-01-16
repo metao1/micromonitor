@@ -66,6 +66,7 @@ export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
                     });
                 },
                 (error) => {
+                    console.log(JSON.stringify(error));
                     if (error.status === 503 || error.status === 500 || error.status === 404) {
                         if (error.status === 500 || error.status === 404) {
                             this.routesService.routeDown(this.activeRoute);
