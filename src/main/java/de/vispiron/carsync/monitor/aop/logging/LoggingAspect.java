@@ -32,7 +32,7 @@ public class LoggingAspect {
     /**
      * Pointcut that matches all repositories, services and Web REST endpoints.
      */
-    @Pointcut("within(de.vispiron.carsync.monitor.repository..*) || within(de.vispiron.carsync.monitor.service..*) || within(de.vispiron.carsync.monitor.web.rest..*)")
+    @Pointcut("within(de.vispiron.carsync.monitor.*) || within(de.vispiron.carsync.monitor.service..*) || within(de.vispiron.carsync.monitor.web.rest..*)")
     public void loggingPointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }

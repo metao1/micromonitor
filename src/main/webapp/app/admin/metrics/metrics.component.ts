@@ -46,7 +46,7 @@ export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
                     this.cachesStats = {};
                     Object.keys(metrics.timers).forEach((key) => {
                         const value = metrics.timers[key];
-                        if (key.indexOf('web.rest') !== -1 || key.indexOf('service') !== -1) {
+                        if (key.indexOf('rest') !== -1 || key.indexOf('service') !== -1) {
                             this.servicesStats[key] = value;
                         }
                     });

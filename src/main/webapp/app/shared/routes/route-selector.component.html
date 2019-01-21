@@ -1,6 +1,6 @@
 <div class="route-selector d-inline-flex" *ngIf="routes">
     <div ngbDropdown #dropId="ngbDropdown" placement="bottom-right">
-        <button class="btn btn-outline-primary" id="sortMenu" ngbDropdownToggle [innerHTML]="getActiveRoute()"></button>
+        <button class="m-2 btn btn-outline-primary" id="sortMenu" ngbDropdownToggle [innerHTML]="getActiveRoute()"></button>
         <div ngbDropdownMenu aria-labelledby="sortMenu" aria-expanded="true" (click)="$event.stopPropagation()">
             <p class="d-flex">
                 <input type="search" class="form-control d-flex search" placeholder="Search an application..."
