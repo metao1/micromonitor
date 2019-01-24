@@ -2,7 +2,7 @@ package de.vispiron.carsync.monitor.library.config;
 
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Map;/*
 
 public interface MicroMonitorDefaults {
 
@@ -190,3 +190,4 @@ public interface MicroMonitorDefaults {
         String password = null;
     }
 }
+*/
