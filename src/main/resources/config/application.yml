@@ -60,6 +60,7 @@ eureka:
         registry-fetch-interval-seconds: 10
         service-url:
             defaultZone: http://admin:${spring.security.user.password:admin}@localhost:${server.port}/eureka/
+        region: default
     server:
         # see discussion about enable-self-preservation:
         # https://github.com/micromonitor/generator-micromonitor/issues/3654

@@ -59,7 +59,7 @@
         - ./ssh/:/root/.ssh/
       environment:
         - SPRING_PROFILES_ACTIVE=prod
-        - GIT_URI=git@github.com:micromonitor/microservice.git
+        - GIT_URI=https://git.cardev.de/ccct/carsync-monitoring.git
         - GIT_SEARCH_PATHS=central-config
       ports:
         - 8761:8761

@@ -14,7 +14,6 @@ import javax.cache.spi.CachingProvider;
  * This allows to use the same classloader for ehcache, both for the Spring Cache abstraction and for the Hibernate
  * 2nd level cache.
  *
- * See https://github.com/NgMcmonitor/generator-NgMcmonitor/issues/7783 for more information.
  */
 public class BeanClassLoaderAwareJCacheRegionFactory extends NoDefaultJCacheRegionFactory {
 

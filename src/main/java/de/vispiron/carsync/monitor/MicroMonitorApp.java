@@ -3,7 +3,6 @@ package de.vispiron.carsync.monitor;
 import de.vispiron.carsync.monitor.config.ApplicationProperties;
 import de.vispiron.carsync.monitor.config.ConfigServerConfig;
 import de.vispiron.carsync.monitor.config.DefaultProfileUtil;
-
 import de.vispiron.carsync.monitor.library.config.MicroMonitorConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

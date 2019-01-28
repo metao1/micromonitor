@@ -3,7 +3,7 @@
     "microMonitorVersion": "4.13.3",
     "baseName": "microMonitorRegistry",
     "packageName": "de.vispiron.carsync.monitor",
-    "packageFolder": "io/github/microMonitor/registry",
+    "packageFolder": "de/vispiron/carsync/monitor",
     "serverPort": "8761",
     "authenticationType": "jwt",
     "hibernateCache": "no",

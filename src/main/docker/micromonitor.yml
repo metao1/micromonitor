@@ -14,7 +14,7 @@ services:
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS=file:./central-config/localhost-config/
             # - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=git
-            # - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_URI=https://github.com/NgMcmonitor/NgMcmonitor-registry/
+            # - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_URI=https://git.cardev.de/ccct/carsync-monitoring
             # - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_PATHS=central-config
         ports:
             - 8761:8761

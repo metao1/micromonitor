@@ -1,7 +1,6 @@
 {
   "name": "MicroMonitor",
   "description": "This is the MicroMonitor",
-  "logo": "https://www.vispiron.de/images/logo/logo-NgMcmonitor-drink-coffee.png",
   "env": {
     "microMonitor_PASSWORD": {
       "description": "Admin password for the registry (used to login after clicking 'View App'). Must be at least 5 characters.",
@@ -22,6 +21,6 @@
   },
   "buildpacks": [
     {"url": "heroku/jvm"},
-    {"url": "https://github.com/microMonitor/microservice-buildpack"}
+    {"url": "https://git.cardev.de/ccct/carsync-monitoring"}
   ]
 }
