@@ -26,14 +26,26 @@ import org.springframework.security.web.util.matcher.RequestMatcher;
 @Profile(Constants.PROFILE_OAUTH2)
 public class OAuth2SecurityConfiguration extends ResourceServerConfigurerAdapter {
 
-    private static final String OAUTH2_PRINCIPAL_ATTRIBUTE = "preferred_username";
-
-    private static final String OAUTH2_AUTHORITIES_ATTRIBUTE = "roles";
 
     private ResourceServerProperties resourceServerProperties;
 
-    public OAuth2SecurityConfiguration(ResourceServerProperties resourceServerProperties) {
+    private final ApplicationProperties applicationProperties;
+
+    public OAuth2SecurityConfiguration(ResourceServerProperties resourceServerProperties,
+                                       ApplicationProperties applicationProperties) {
         this.resourceServerProperties = resourceServerProperties;
+        this.applicationProperties = applicationProperties;
+    }
+
+
+    @Bean
+    public PrincipalExtractor principalExtractor() {
+        return new SimplePrincipalExtractor(applicationProperties.getOauth2().getPrincipalAttribute());
+    }
+
+    @Bean
+    public AuthoritiesExtractor authoritiesExtractor() {
+        return new SimpleAuthoritiesExtractor(applicationProperties.getOauth2().getAuthoritiesAttribute());
     }
 
     @Bean
@@ -43,16 +55,6 @@ public class OAuth2SecurityConfiguration extends ResourceServerConfigurerAdapter
         userInfoTokenServices.setPrincipalExtractor(principalExtractor);
         userInfoTokenServices.setAuthoritiesExtractor(authoritiesExtractor);
         return userInfoTokenServices;
-    }
-
-    @Bean
-    public PrincipalExtractor principalExtractor() {
-        return new SimplePrincipalExtractor(OAUTH2_PRINCIPAL_ATTRIBUTE);
-    }
-
-    @Bean
-    public AuthoritiesExtractor authoritiesExtractor() {
-        return new SimpleAuthoritiesExtractor(OAUTH2_AUTHORITIES_ATTRIBUTE);
     }
 
     @Bean
@@ -69,10 +71,10 @@ public class OAuth2SecurityConfiguration extends ResourceServerConfigurerAdapter
             .headers()
             .frameOptions()
             .disable()
-        .and()
+            .and()
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        .and()
+            .and()
             .requestMatcher(authorizationHeaderRequestMatcher())
             .authorizeRequests()
             .antMatchers("/services/**").authenticated()

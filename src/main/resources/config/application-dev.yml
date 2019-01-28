@@ -16,10 +16,8 @@ spring:
 
 # ===================================================================
 # To enable SSL, generate a certificate using:
-# keytool -genkey -alias micromonitorRegistry -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias micromonitor -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
-# You can also use Let's Encrypt:
-# https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
 #
 # Then, modify the server.ssl properties so your "server" configuration looks like:
 #
@@ -29,7 +27,7 @@ spring:
 #        key-store: keystore.p12
 #        key-store-password: <your-password>
 #        keyStoreType: PKCS12
-#        keyAlias: micromonitorRegistry
+#        keyAlias: micromonitor
 # ===================================================================
 server:
     port: 8761
@@ -57,7 +55,7 @@ microservice:
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific micromonitor mail property, for standard properties see MailProperties
-        from: MicroMonitor@localhost
+        from: micromonitor@localhost
         base-url: http://127.0.0.1:8761
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
