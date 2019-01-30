@@ -174,7 +174,7 @@ public class CloudConfigRefreshService {
      *
      * @return configPath String
      */
-    public String getConfigPath() {
+    private String getConfigPath() {
         return configPath;
     }
 }

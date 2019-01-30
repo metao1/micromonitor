@@ -23,13 +23,13 @@ public class AngularCookieLocaleResolver extends CookieLocaleResolver {
 
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
-        parseLocaleCookieIfNecessary(request);
+        analyseLocaleCookieIfNecessary(request);
         return (Locale) request.getAttribute(LOCALE_REQUEST_ATTRIBUTE_NAME);
     }
 
     @Override
     public LocaleContext resolveLocaleContext(final HttpServletRequest request) {
-        parseLocaleCookieIfNecessary(request);
+        analyseLocaleCookieIfNecessary(request);
         return new TimeZoneAwareLocaleContext() {
             @Override
             public Locale getLocale() {
@@ -49,7 +49,7 @@ public class AngularCookieLocaleResolver extends CookieLocaleResolver {
         super.addCookie(response, quote(cookieValue));
     }
 
-    private void parseLocaleCookieIfNecessary(HttpServletRequest request) {
+    private void analyseLocaleCookieIfNecessary(HttpServletRequest request) {
         if (request.getAttribute(LOCALE_REQUEST_ATTRIBUTE_NAME) == null) {
             // Retrieve and parse cookie value.
             Cookie cookie = WebUtils.getCookie(request, getCookieName());
