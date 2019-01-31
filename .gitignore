@@ -143,7 +143,4 @@ Desktop.ini
 ######################
 .eslintcache
 logs
-build.gradle
-gradlew
-gradlew.bat
 settings.gradle
