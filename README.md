@@ -9,5 +9,5 @@ Full documentation is available on the [documentation for microservices](https:/
 ## Running locally
 
 To run the cloned repository;
-* For development run `./gradlew -Pdev` to just start in development or run `./gradlew`.
+* For development run `./gradlew bootRun` to just start in development or run `./gradlew`.
 * For production profile run `./gradlew -Pprod`
