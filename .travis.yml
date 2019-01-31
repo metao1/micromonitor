@@ -3,11 +3,11 @@ os:
 services:
   - docker
 install:
-  - docker build -t microMonitor/microservice:travis .
+  - docker build -t micromonitor/micromonitor:travis .
   - docker images
-  - docker run --name microservice -p 8761:8761 -d -t microMonitor/microservice:travis
+  - docker run --name micromonitor -p 8761:8761 -d -t micromonitor/micromonitor:travis
 script:
   - sleep 45
   - docker ps
-  - docker logs microservice
+  - docker logs micromonitor
   - curl -v http://localhost:8761

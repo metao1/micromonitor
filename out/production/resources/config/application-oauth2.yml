@@ -1,0 +1,35 @@
+# ===================================================================
+# OpenID Connect Settings. Default settings are for Keycloak in Docker.
+# Start Keycloak using `docker-compose -f src/main/docker/keycloak.yml up`.
+#
+# export SECURITY_OAUTH2_CLIENT_CLIENT_ID="micromonitor"
+# export SECURITY_OAUTH2_CLIENT_CLIENT_SECRET="38561a05"
+# ===================================================================
+security:
+    oauth2:
+        client:
+            access-token-uri: http://localhost:9080/auth/realms/micromonitor/protocol/openid-connect/token
+            user-authorization-uri: http://localhost:9080/auth/realms/micromonitor/protocol/openid-connect/auth
+            client-id: micromonitor
+            client-secret: micromonitor
+            client-authentication-scheme: form
+            scope: openid profile email
+        resource:
+            user-info-uri: http://localhost:9080/auth/realms/micromonitor/protocol/openid-connect/userinfo
+            token-info-uri: http://localhost:9080/auth/realms/micromonitor/protocol/openid-connect/token/introspect
+            prefer-token-info: false
+            jwk:
+                key-set-uri: http://localhost:9080/auth/realms/micromonitor/protocol/openid-connect/certs
+
+server:
+    servlet:
+        session:
+            cookie:
+                http-only: true
+                # custom session cookie name to prevent conflict with another application on the same domain
+                name: JSESSIONID_REGISTRY
+
+application:
+    oauth2:
+        principal-attribute: preferred_username
+        authorities-attribute: roles
