@@ -1,4 +1,5 @@
 package de.vispiron.carsync.monitor.library.config.jcache;
+/*
 
 import java.util.Properties;
 import javax.cache.Cache;
@@ -6,12 +7,14 @@ import javax.cache.Cache;
 import org.hibernate.cache.jcache.JCacheRegionFactory;
 import org.hibernate.cache.spi.CacheDataDescription;
 
+*/
 /**
  * Extends the default {@code JCacheRegionFactory} but makes sure all caches already exist to prevent
  * spontaneous creation of badly configured caches (e.g. {@code new MutableConfiguration()}.
  *
  * See http://www.ehcache.org/blog/2017/03/15/spontaneous-cache-creation.html for more information.
- */
+ *//*
+
 @SuppressWarnings("serial")
 public class NoDefaultJCacheRegionFactory extends JCacheRegionFactory {
 
@@ -24,3 +27,4 @@ public class NoDefaultJCacheRegionFactory extends JCacheRegionFactory {
         throw new IllegalStateException(EXCEPTION_MESSAGE + " " + regionName);
     }
 }
+*/

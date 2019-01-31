@@ -15,6 +15,7 @@ import javax.cache.spi.CachingProvider;
  * 2nd level cache.
  *
  */
+/*
 public class BeanClassLoaderAwareJCacheRegionFactory extends NoDefaultJCacheRegionFactory {
 
     private static volatile ClassLoader classLoader;
@@ -52,13 +53,16 @@ public class BeanClassLoaderAwareJCacheRegionFactory extends NoDefaultJCacheRegi
         return uri;
     }
 
-    /**
+    */
+/**
      * This method must be called from a Spring Bean to get the classloader.
      * For example: BeanClassLoaderAwareJCacheRegionFactory.setBeanClassLoader(this.getClass().getClassLoader());
      *
      * @param classLoader The Spring classloader
-     */
+     *//*
+
     public static void setBeanClassLoader(ClassLoader classLoader) {
         BeanClassLoaderAwareJCacheRegionFactory.classLoader = classLoader;
     }
 }
+*/

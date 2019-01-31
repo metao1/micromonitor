@@ -144,3 +144,4 @@ Desktop.ini
 .eslintcache
 logs
 settings.gradle
+out/production/classes/

@@ -1,7 +1,11 @@
 plugins {
+    id 'org.springframework.boot' version '2.1.2.RELEASE'
+    id 'application'
     id 'java'
     id 'maven'
 }
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenLocal()
@@ -58,9 +62,7 @@ dependencies {
     compile 'org.springframework.security:spring-security-jwt:1.0.9.RELEASE'
     compile 'org.springframework.security:spring-security-data:5.1.1.RELEASE'
     compile 'javax.cache:cache-api:1.1.0'
-    compile 'org.hibernate:hibernate-jcache:5.2.17.Final'
-    compile 'org.liquibase:liquibase-core:3.5.5'
-    compile 'org.mongodb:mongo-java-driver:3.9.1'
+    
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398'
     compile 'org.springframework.boot:spring-boot-starter-undertow:2.1.0.RELEASE'
@@ -82,7 +84,25 @@ sourceCompatibility = '11'
 
 configurations.all {
 }
+jar {
+    enabled = true
+}
+jar {
+    enabled = true
+}
+bootJar {
+    mainClassName = 'de.vispiron.carsync.monitor.MicroMonitorApp'
+}
+springBoot {
+    mainClassName = 'de.vispiron.carsync.monitor.MicroMonitorApp'
+}
+bootRun {
+    main = 'de.vispiron.carsync.monitor.MicroMonitorApp'
+}
 
+application {
+    mainClassName = "de.vispiron.carsync.monitor.MicroMonitorApp"
+}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }

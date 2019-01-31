@@ -12,7 +12,7 @@ spring:
                     - type: git
                       uri: https://github.com/metao1/config-repo.git
                       username: metao1
-                      password: mehrdad1366
+                      password: @Mehrdad8591
                 prefix: /config
             fail-fast: true
             # name of the config server's property source (file.yml) that we want to use
